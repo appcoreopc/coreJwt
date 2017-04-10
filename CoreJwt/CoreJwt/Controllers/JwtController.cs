@@ -53,20 +53,26 @@ namespace CoreJwt.Controllers
       };
 
             // Create the JWT security token and encode it.
-            var jwt = new JwtSecurityToken(
-                issuer: _jwtOptions.Issuer,
-                audience: _jwtOptions.Audience,
-                claims: claims,
-                notBefore: _jwtOptions.NotBefore,
-                expires: _jwtOptions.Expiration,
-                signingCredentials: _jwtOptions.SigningCredentials);
+            //var jwt = new JwtSecurityToken(
+            //    issuer: _jwtOptions.Issuer,
+            //    audience: _jwtOptions.Audience,
+            //    claims: claims,
+            //    notBefore: _jwtOptions.NotBefore,
+            //    expires: _jwtOptions.Expiration,
+            //    signingCredentials: _jwtOptions.SigningCredentials);
 
-            var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
+            //var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
 
             // Serialize and return the response
+            //var response = new
+            //{
+            //    access_token = encodedJwt,
+            //    expires_in = (int)_jwtOptions.ValidFor.TotalSeconds
+            //};
+
             var response = new
             {
-                access_token = encodedJwt,
+                access_token = "stupid stupid",
                 expires_in = (int)_jwtOptions.ValidFor.TotalSeconds
             };
 
